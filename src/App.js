@@ -13,7 +13,9 @@ function App() {
         <Header />
         <Switch>
           <Route path="/">
-            <Welcome />
+            <section>
+              <Welcome />
+            </section>
           </Route>
         </Switch>
       </Router>
