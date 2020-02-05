@@ -15,7 +15,7 @@ const Welcome = () => {
 export default Welcome;
 
 
-const WelcomeSection = styled.section`
+const WelcomeSection = styled.div`
   width: 100vw;
   height: 100vh;
 `;
