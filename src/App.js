@@ -4,6 +4,7 @@ import store from './redux';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Header from './components/Header';
+import Welcome from './components/Welcome';
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
         <Header />
         <Switch>
           <Route path="/">
-
+            <Welcome />
           </Route>
         </Switch>
       </Router>
