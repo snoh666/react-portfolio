@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 
 import Logo from './images/logo.png';
@@ -6,9 +6,15 @@ import UnderlinedSpan from './styled/UnderlinedSpan';
 
 const Welcome = () => {
 
+  const welcomeRef = useRef(null);
+
+  useEffect(() => {
+    welcomeRef.current.classList.add('active');
+  }, [])
+
   return (
-    <WelcomeSection>
-      <StyledBackgroundImage src={Logo} alt="Site Background" onLoad={e => e.target.parentElement.classList.add('active')} />
+    <WelcomeSection ref={welcomeRef}>
+      <StyledBackgroundImage src={Logo} alt="Site Background" />
         <div className="welcome__title">
           <h1>
             Snoh co.
