@@ -18,7 +18,7 @@ const Welcome = () => {
           </p>
         </div>
       <SeeMoreWrapper>
-        <SeeMoreButton>
+        <SeeMoreButton onClick={_ => window.scrollTo({behavior: 'smooth', top: window.innerHeight})}>
           <span>See more..</span>
         </SeeMoreButton>
       </SeeMoreWrapper>
