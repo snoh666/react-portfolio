@@ -62,7 +62,7 @@ const WelcomeSection = styled.div`
 
     transform: translateX(0);
     will-change: transform;
-    transition: transform 1.5s cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+    transition: transform 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   }
 
   &.active::before {
