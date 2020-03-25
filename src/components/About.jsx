@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import UnderlinedSpan from './styled/UnderlinedSpan';
 import SectionTitle from './styled/SectionTitle';
 
 function About() {
