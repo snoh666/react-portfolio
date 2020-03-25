@@ -1,20 +1,17 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 import Logo from './images/logo.png';
 import UnderlinedSpan from './styled/UnderlinedSpan';
 
-const Welcome = () => {
-
-  const welcomeRef = useRef(null);
-
-  useEffect(() => {
-    welcomeRef.current.classList.add('active');
-  }, [])
+const Welcome = ({ setLoaded }) => {
 
   return (
-    <WelcomeSection ref={welcomeRef}>
-      <StyledBackgroundImage src={Logo} alt="Site Background" />
+    <WelcomeSection >
+      <StyledBackgroundImage src={Logo} alt="Site Background" onLoad={e => {
+        setLoaded(true);
+        e.target.parentElement.classList.add('active');
+      }} />
         <div className="welcome__title">
           <h1>
             Snoh co.

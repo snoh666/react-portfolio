@@ -2,17 +2,12 @@ import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import StyledButton from './styled/StyledButton';
 
-const Header = () => {
+const Header = ({isLoaded}) => {
 
   const logo = 'Snoh Co.';
-  const headerRef = useRef(null);
-
-  useEffect(() => {
-    headerRef.current.classList.add('active');
-  }, [])
 
   return (
-    <StyledHeader ref={headerRef}>
+    <StyledHeader className={isLoaded ? 'active' : null} >
       <StyledLogo>
         <h2>
           {logo}

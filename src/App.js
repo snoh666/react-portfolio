@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import store from './redux';
 import { Provider } from 'react-redux';
@@ -11,6 +11,8 @@ import Offers from './components/Offers';
 import {ThemeProvider} from 'styled-components';
 
 function App() {
+
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   const themeProps = {
     black: '#030303',
@@ -25,12 +27,12 @@ function App() {
       <ThemeProvider theme={themeProps}>
         <Router>
           <nav>
-            <Header />
+            <Header isLoaded={imageLoaded} />
           </nav>
           <Switch>
             <Route path="/">
               <section>
-                <Welcome />
+                <Welcome setLoaded={setImageLoaded} />
               </section>
               <section>
                 <About />
