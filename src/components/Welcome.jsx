@@ -147,7 +147,12 @@ const SeeMoreButton = styled.button`
     transition: transform .4s cubic-bezier(0.075, 0.82, 0.165, 1);
   }
 
-  &:hover {
+  &:focus {
+    outline: none;
+  }
+
+  &:hover,
+  &:focus {
     &::before {
       transform: rotate(-45deg) translateY(0);
     }
