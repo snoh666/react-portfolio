@@ -1,13 +1,18 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import StyledButton from './styled/StyledButton';
 
 const Header = () => {
 
   const logo = 'Snoh Co.';
+  const headerRef = useRef(null);
+
+  useEffect(() => {
+    headerRef.current.classList.add('active');
+  }, [])
 
   return (
-    <StyledHeader>
+    <StyledHeader ref={headerRef}>
       <StyledLogo>
         <h2>
           {logo}
@@ -37,7 +42,8 @@ const StyledHeader = styled.header`
   height: 50px;
   padding: 0 5%;
 
-  position: sticky;
+  position: fixed;
+  z-index: 100;
   display: flex;
 
   flex-flow: row nowrap;
@@ -47,6 +53,19 @@ const StyledHeader = styled.header`
   h2 {
     font-weight: 300;
   }
+
+  transform: translateY(-105%);
+  transform-origin: 0 0;
+  opacity: 0;
+
+  transition: transform .4s cubic-bezier(0.4, 0, 1, 1) 1s,
+    opacity .3s cubic-bezier(0.4, 0, 1, 1) 1s;
+
+  &.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
 `;
 
 const StyledLogo = styled.div`
