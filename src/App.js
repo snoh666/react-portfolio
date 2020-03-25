@@ -14,7 +14,7 @@ function App() {
 
   const themeProps = {
     black: '#030303',
-    grey: '#707070',
+    grey: '#717171',
     white: '#FFFFFF',
     Montserrat: '\'Montserrat\', sans-serif',
     Roboto: '\'Roboto Condensed\', sans-serif'
