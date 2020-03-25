@@ -88,12 +88,32 @@ const SeeMoreButton = styled.button`
   position: relative;
   overflow: hidden;
 
-  &::before,
+  &::before {
+    content: '';
+    display: block;
+
+    bottom: 1.875px;
+    right: 3.75px;
+    width: 7.5px;
+    height: 7.5px;
+
+    position: absolute;
+
+    border-left: 1px solid ${props => props.theme.white};
+    border-bottom: 1px solid ${props => props.theme.white};
+
+    transform: rotate(-45deg) translate(10px, -10px);
+    transform-origin: 50% 50%;
+
+    transition: transform .4s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
   &::after {
     content: '';
     display: block;
 
     top: 0;
+    right: 6px;
     width: 1px;
     height: 100%;
 
@@ -101,26 +121,16 @@ const SeeMoreButton = styled.button`
 
     background-color: ${props => props.theme.white};
 
+    transform: translateY(-105%);
     transition: transform .4s cubic-bezier(0.075, 0.82, 0.165, 1);
   }
 
-
-  &::before {
-    left: 0;
-
-    transform: translateY(-105%);
-  }
-
-  &::after {
-    right: 0;
-
-    transform: translateY(-105%);
-  }
-
   &:hover {
-    &::before,
+    &::before {
+      transform: rotate(-45deg) translateY(0);
+    }
     &::after {
-      transform: translateY(0);
+      transform: translateY(-3.75px);
     }
   }
 `;
