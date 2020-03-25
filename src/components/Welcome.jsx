@@ -8,7 +8,7 @@ const Welcome = () => {
 
   return (
     <WelcomeSection>
-      <StyledBackgroundImage src={Logo} alt="Site Background" />
+      <StyledBackgroundImage src={Logo} alt="Site Background" onLoad={e => e.target.parentElement.classList.add('active')} />
         <div>
           <h1>
             Snoh co.
@@ -45,6 +45,28 @@ const WelcomeSection = styled.div`
   h1 {
     font-size: 5.25rem;
     font-weight: 200;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: ${props => props.theme.black};
+    z-index: 1;
+
+    transform: translateX(0);
+    will-change: transform;
+    transition: transform .7s cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+  }
+
+  &.active::before {
+    transform: translateX(-105%);
   }
 `;
 
