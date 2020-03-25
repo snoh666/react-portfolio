@@ -57,12 +57,12 @@ const WelcomeSection = styled.div`
     width: 100%;
     height: 100%;
 
-    background: ${props => props.theme.black};
+    background: linear-gradient(to right, ${props => props.theme.black} 75%, transparent);
     z-index: 1;
 
     transform: translateX(0);
     will-change: transform;
-    transition: transform .7s cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+    transition: transform 1.5s cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
   }
 
   &.active::before {
