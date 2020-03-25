@@ -7,34 +7,44 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Welcome from './components/Welcome';
 import About from './components/About';
-import CommercialProjects from './components/CommercialPrjs';
-import GitProjects from './components/GitProjects';
+import Offers from './components/Offers';
+import {ThemeProvider} from 'styled-components';
 
 function App() {
+
+  const themeProps = {
+    black: '#030303',
+    grey: '#707070',
+    white: '#FFFFFF',
+    Montserrat: '\'Montserrat\', sans-serif',
+    Roboto: '\'Roboto Condensed\', sans-serif'
+  }
+
   return (
     <Provider store={store}>
-      <Router>
-        <Header />
-        <Switch>
-          <Route path="/">
-            <section>
-              <Welcome />
-            </section>
-            <section>
-              <About />
-            </section>
-            <section>
-              <CommercialProjects />
-            </section>
-            <section>
-              <GitProjects />
-            </section>
-          </Route>
-        </Switch>
-        <footer>
-          <Footer />
-        </footer>
-      </Router>
+      <ThemeProvider theme={themeProps}>
+        <Router>
+          <nav>
+            <Header />
+          </nav>
+          <Switch>
+            <Route path="/">
+              <section>
+                <Welcome />
+              </section>
+              <section>
+                <About />
+              </section>
+              <section>
+                <Offers />
+              </section>
+            </Route>
+          </Switch>
+          <footer>
+            <Footer />
+          </footer>
+        </Router>
+      </ThemeProvider>
     </Provider>
   );
 }
