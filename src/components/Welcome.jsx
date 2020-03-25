@@ -9,7 +9,7 @@ const Welcome = () => {
   return (
     <WelcomeSection>
       <StyledBackgroundImage src={Logo} alt="Site Background" onLoad={e => e.target.parentElement.classList.add('active')} />
-        <div>
+        <div className="welcome__title">
           <h1>
             Snoh co.
           </h1>
@@ -31,16 +31,14 @@ export default Welcome;
 
 const WelcomeSection = styled.div`
   width: 100%;
-  height: calc(100vh - 50px);
+  height: 100vh;
+  padding: 50px 0 0 5%;
 
   position: relative;
-
   display: flex;
   flex-flow: column nowrap;
   align-items: flex-start;
   justify-content: center;
-
-  padding-left: 5%;
 
   h1 {
     font-size: 5.25rem;
@@ -57,16 +55,30 @@ const WelcomeSection = styled.div`
     width: 100%;
     height: 100%;
 
-    background: linear-gradient(to right, ${props => props.theme.black} 75%, transparent);
+    background: ${props => props.theme.black};
     z-index: 1;
 
     transform: translateX(0);
     will-change: transform;
-    transition: transform 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: transform 1s cubic-bezier(0.4, 0, 1, 1);
   }
 
-  &.active::before {
-    transform: translateX(-105%);
+  .welcome__title {
+    transform: translateY(20px);
+    opacity: 0;
+
+    transition: all .5s cubic-bezier(0.4, 0, 1, 1) 1.2s;
+  }
+
+  &.active {
+    &::before {
+      transform: translateX(-105%);
+    }
+    .welcome__title {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
   }
 `;
 
@@ -76,7 +88,7 @@ const StyledBackgroundImage = styled.img`
   top: 0;
   left: 0;
   width: 100%;
-  height: calc(100% - (100vh - 100%));
+  height: 100%;
 
   object-fit: contain;
   object-position: center;
@@ -86,7 +98,7 @@ const StyledBackgroundImage = styled.img`
 
 const SeeMoreWrapper = styled.div`
   position: absolute;
-  bottom: 2.5vh;
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
 `;
@@ -147,12 +159,7 @@ const SeeMoreButton = styled.button`
     transition: transform .4s cubic-bezier(0.075, 0.82, 0.165, 1);
   }
 
-  &:focus {
-    outline: none;
-  }
-
-  &:hover,
-  &:focus {
+  &:hover {
     &::before {
       transform: rotate(-45deg) translateY(0);
     }
