@@ -1,19 +1,44 @@
-import React from 'react'
+import React from 'react';
+import styled from 'styled-components';
+import UnderlinedSpan from './styled/UnderlinedSpan';
+import SectionTitle from './styled/SectionTitle';
 
 function About() {
 
   return (
-    <div>
-      <h2>
-        About me section
-      </h2>
+    <AboutWrapper>
+      <SectionTitle>
+        <span>About me</span>
+      </SectionTitle>
       <div>
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae expedita corporis fugiat. Unde esse quaerat saepe tempore, minus doloremque sunt nostrum.
+          I'm 19 years old front-end developer with great ambitions.
+          I really love building stuff with ReactJS but currently im working with wordpress themes as freelancer.
+          Im also currently looking forward to get full-time job as i'm ending my school in may.
         </p>
       </div>
-    </div>
+    </AboutWrapper>
   );
 }
 
 export default About;
+
+const AboutWrapper = styled.div`
+  width: 100%;
+  max-width: 760px;
+  min-height: 75vh;
+  margin: 100px auto;
+  text-align: center;
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    line-height: 1.25em;
+    letter-spacing: 2px;
+    font-weight: 400;
+    color: ${props => props.theme.grey};
+  }
+`;
