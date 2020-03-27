@@ -97,6 +97,11 @@ const StyledBackgroundImage = styled.img`
   object-position: center;
 
   z-index: -1;
+
+  @media (max-width: 1200px) {
+    object-position: 100% 50%;
+  }
+
 `;
 
 const SeeMoreWrapper = styled.div`
