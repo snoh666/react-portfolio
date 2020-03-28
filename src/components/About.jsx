@@ -12,7 +12,7 @@ function About() {
       <div>
         <p>
           I'm a 19 years old front-end developer with big ambitions.
-          Half a year ago I started freelancing with developing responsive Wordpress themes.
+          Half a year ago I started freelancing with development of responsive Wordpress themes.
           Between projects I focus on polishing my skills and developing new ones with React and Vue.
           In the near future I’m planning to get a full time job as I’m ending my school in May.
         </p>
