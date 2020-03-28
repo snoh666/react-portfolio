@@ -11,9 +11,10 @@ function About() {
       </SectionTitle>
       <div>
         <p>
-          I'm 19 years old front-end developer with great ambitions.
-          I really love building stuff with ReactJS but currently im working with wordpress themes as freelancer.
-          Im also currently looking forward to get full-time job as i'm ending my school in may.
+          I'm a 19 years old front-end developer with big ambitions.
+          Half a year ago I started freelancing with developing responsive Wordpress themes.
+          Between projects I focus on polishing my skills and developing new ones with React and Vue.
+          In the near future I’m planning to get a full time job as I’m ending my school in May.
         </p>
       </div>
     </AboutWrapper>
