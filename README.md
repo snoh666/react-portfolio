@@ -1,6 +1,7 @@
-# My first ever version of portfolio made in reactJS
+# Portoflio -- React.JS
 
-Started creating by 28.01.2020
-Created after deciding that old version is a little bit bad designed and a way back with my front-end skills that i expanded while working on my first commercial projects.
+I decided to create this portfolio because lack of my place where someone could view my all commercial projects with nice screenshots and of course my old one was really really overdue with my all skills and of course design was terrible....
 
-And of course mainly old design isn't the best one i could create so it needs to be freshen up.
+# Credits
+
+Copywriting: [Izabela Robakowska](iz.robakowska05@gmail.com)
