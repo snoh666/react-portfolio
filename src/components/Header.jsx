@@ -1,27 +1,40 @@
 import React from 'react';
 import styled from 'styled-components';
 import StyledButton from './styled/StyledButton';
+import { connect } from 'react-redux';
+import { getRefs } from '../redux/actions';
 
-const Header = ({isLoaded}) => {
+const Header = ({ isLoaded, sections }) => {
 
+  const { welcome, about, projects } = sections;
+  console.log(sections);
   const logo = 'Snoh Co.';
 
   return (
     <StyledHeader className={isLoaded ? 'active' : null} >
       <StyledLogo>
         <h2>
-          {logo}
+          <StyledButton onClick={welcome ? _ => welcome.current.scrollIntoView({
+            block: 'start',
+            behavior: 'smooth'
+          }) : null} ><span>{logo}</span></StyledButton>
         </h2>
       </StyledLogo>
       <StyledList>
         <li>
-          <StyledButton><span>About</span></StyledButton>
+          <StyledButton onClick={about ? _ => about.current.scrollIntoView({
+            block: 'start',
+            behavior: 'smooth'
+          }) : null} ><span>About</span></StyledButton>
         </li>
         <li>
-          <StyledButton><span>Offers</span></StyledButton>
+          <StyledButton onClick={projects ? _ => projects.current.scrollIntoView({
+            block: 'start',
+            behavior: 'smooth'
+          }) : null} ><span>Projects</span></StyledButton>
         </li>
         <li>
-          <StyledButton><span>Contact</span></StyledButton>
+          <StyledButton ><span>Contact</span></StyledButton>
         </li>
       </StyledList>
     </StyledHeader>
@@ -29,7 +42,10 @@ const Header = ({isLoaded}) => {
 }
 
 
-export default Header;
+export default connect(
+  getRefs,
+  null
+)(Header);
 
 
 const StyledHeader = styled.header`
