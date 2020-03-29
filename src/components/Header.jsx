@@ -7,7 +7,6 @@ import { getRefs } from '../redux/actions';
 const Header = ({ isLoaded, sections }) => {
 
   const { welcome, about, projects } = sections;
-  console.log(sections);
   const logo = 'Snoh Co.';
 
   return (
