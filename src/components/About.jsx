@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import SectionTitle from './styled/SectionTitle';
+import { connect } from 'react-redux';
+import { setAboutRef } from '../redux/actions';
 
-function About() {
+function About({ setAboutRef }) {
+
+  const aboutRef = useRef();
+
+  useEffect(() => {
+    setAboutRef(aboutRef);
+  });
 
   return (
-    <AboutWrapper>
+    <AboutWrapper ref={aboutRef} >
       <SectionTitle>
         <span>About me</span>
       </SectionTitle>
@@ -21,7 +29,10 @@ function About() {
   );
 }
 
-export default About;
+export default connect(
+  null,
+  {setAboutRef}
+)(About);
 
 const AboutWrapper = styled.div`
   width: 100%;

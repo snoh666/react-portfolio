@@ -1,13 +1,20 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
 
 import Logo from './images/logo.png';
 import UnderlinedSpan from './styled/UnderlinedSpan';
+import { connect } from 'react-redux';
+import { setWelcomeRef } from '../redux/actions';
 
-const Welcome = ({ setLoaded }) => {
+const Welcome = ({ setLoaded, setWelcomeRef }) => {
+  const welcomeRef = useRef();
+
+  useEffect(() => {
+    setWelcomeRef(welcomeRef);
+  });
 
   return (
-    <WelcomeSection >
+    <WelcomeSection ref={welcomeRef} >
       <StyledBackgroundImage src={Logo} alt="Site Background" onLoad={e => {
         setLoaded(true);
         e.target.parentElement.classList.add('active');
@@ -29,7 +36,10 @@ const Welcome = ({ setLoaded }) => {
   );
 };
 
-export default Welcome;
+export default connect(
+  null,
+  { setWelcomeRef }
+)(Welcome);
 
 
 const WelcomeSection = styled.div`

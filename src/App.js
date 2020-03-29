@@ -7,7 +7,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Welcome from './components/Welcome';
 import About from './components/About';
-import Offers from './components/Offers';
+import Projects from './components/Projects';
 import {ThemeProvider} from 'styled-components';
 
 function App() {
@@ -38,7 +38,7 @@ function App() {
                 <About />
               </section>
               <section>
-                <Offers />
+                <Projects />
               </section>
             </Route>
           </Switch>
