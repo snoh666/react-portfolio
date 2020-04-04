@@ -58,11 +58,11 @@ const Header = ({ isLoaded, sections }) => {
             <span>Projects</span>
           </StyledButton>
         </li>
-        <li>
+        {/* <li>
           <StyledButton>
             <span>Contact</span>
           </StyledButton>
-        </li>
+        </li> */}
       </StyledList>
     </StyledHeader>
   );
