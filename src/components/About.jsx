@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 import { setAboutRef } from '../redux/actions';
 
 function About({ setAboutRef }) {
-
   const aboutRef = useRef();
 
   useEffect(() => {
@@ -13,26 +12,24 @@ function About({ setAboutRef }) {
   });
 
   return (
-    <AboutWrapper ref={aboutRef} >
+    <AboutWrapper ref={aboutRef}>
       <SectionTitle>
         <span>About me</span>
       </SectionTitle>
       <div>
         <p>
-          I'm a 19 years old front-end developer with big ambitions.
-          Half a year ago I started freelancing with development of responsive Wordpress themes.
-          Between projects I focus on polishing my skills and developing new ones with React and Vue.
-          In the near future I’m planning to get a full time job as I’m ending my school in May.
+          I'm a 19 years old front-end developer with big ambitions. Half a year
+          ago I started freelancing with development of responsive Wordpress
+          themes. Between projects I focus on polishing my skills and developing
+          new ones with React and Vue. In the near future I’m planning to get a
+          full time job as I’m ending my school in May.
         </p>
       </div>
     </AboutWrapper>
   );
 }
 
-export default connect(
-  null,
-  {setAboutRef}
-)(About);
+export default connect(null, { setAboutRef })(About);
 
 const AboutWrapper = styled.div`
   width: 100%;

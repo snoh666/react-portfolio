@@ -4,7 +4,7 @@ const StyledButton = styled.button`
   font-family: ${props => props.theme.Roboto};
   font-weight: 300;
 
-  padding: .2rem 2rem;
+  padding: 0.2rem 2rem;
 
   font-size: 18px;
   line-height: 24px;
@@ -19,7 +19,8 @@ const StyledButton = styled.button`
   position: relative;
   overflow: hidden;
 
-  &::before, &::after {
+  &::before,
+  &::after {
     content: '';
     display: block;
 
@@ -30,7 +31,7 @@ const StyledButton = styled.button`
 
     background-color: ${props => props.theme.white};
 
-    transition: transform .2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: transform 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
   }
 
   span {
@@ -46,7 +47,7 @@ const StyledButton = styled.button`
 
       background-color: ${props => props.theme.white};
 
-      transition: transform .4s cubic-bezier(0.075, 0.82, 0.165, 1) .2s;
+      transition: transform 0.4s cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s;
     }
 
     &::before {

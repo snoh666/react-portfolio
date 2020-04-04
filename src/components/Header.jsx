@@ -5,47 +5,70 @@ import { connect } from 'react-redux';
 import { getRefs } from '../redux/actions';
 
 const Header = ({ isLoaded, sections }) => {
-
   const { welcome, about, projects } = sections;
   const logo = 'Snoh Co.';
 
   return (
-    <StyledHeader className={isLoaded ? 'active' : null} >
+    <StyledHeader className={isLoaded ? 'active' : null}>
       <StyledLogo>
         <h2>
-          <StyledButton onClick={welcome ? _ => welcome.current.scrollIntoView({
-            block: 'start',
-            behavior: 'smooth'
-          }) : null} ><span>{logo}</span></StyledButton>
+          <StyledButton
+            onClick={
+              welcome
+                ? _ =>
+                    welcome.current.scrollIntoView({
+                      block: 'start',
+                      behavior: 'smooth',
+                    })
+                : null
+            }
+          >
+            <span>{logo}</span>
+          </StyledButton>
         </h2>
       </StyledLogo>
       <StyledList>
         <li>
-          <StyledButton onClick={about ? _ => about.current.scrollIntoView({
-            block: 'start',
-            behavior: 'smooth'
-          }) : null} ><span>About</span></StyledButton>
+          <StyledButton
+            onClick={
+              about
+                ? _ =>
+                    about.current.scrollIntoView({
+                      block: 'start',
+                      behavior: 'smooth',
+                    })
+                : null
+            }
+          >
+            <span>About</span>
+          </StyledButton>
         </li>
         <li>
-          <StyledButton onClick={projects ? _ => projects.current.scrollIntoView({
-            block: 'start',
-            behavior: 'smooth'
-          }) : null} ><span>Projects</span></StyledButton>
+          <StyledButton
+            onClick={
+              projects
+                ? _ =>
+                    projects.current.scrollIntoView({
+                      block: 'start',
+                      behavior: 'smooth',
+                    })
+                : null
+            }
+          >
+            <span>Projects</span>
+          </StyledButton>
         </li>
         <li>
-          <StyledButton ><span>Contact</span></StyledButton>
+          <StyledButton>
+            <span>Contact</span>
+          </StyledButton>
         </li>
       </StyledList>
     </StyledHeader>
   );
-}
+};
 
-
-export default connect(
-  getRefs,
-  null
-)(Header);
-
+export default connect(getRefs, null)(Header);
 
 const StyledHeader = styled.header`
   width: 100%;
@@ -68,14 +91,13 @@ const StyledHeader = styled.header`
   transform-origin: 0 0;
   opacity: 0;
 
-  transition: transform .4s cubic-bezier(0.4, 0, 1, 1) 1s,
-    opacity .3s cubic-bezier(0.4, 0, 1, 1) 1s;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 1, 1) 1s,
+    opacity 0.3s cubic-bezier(0.4, 0, 1, 1) 1s;
 
   &.active {
     opacity: 1;
     transform: translateY(0);
   }
-
 `;
 
 const StyledLogo = styled.div`

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 
 import store from './redux';
 import { Provider } from 'react-redux';
@@ -8,19 +8,18 @@ import Footer from './components/Footer';
 import Welcome from './components/Welcome';
 import About from './components/About';
 import Projects from './components/Projects';
-import {ThemeProvider} from 'styled-components';
+import { ThemeProvider } from 'styled-components';
 
 function App() {
-
   const [imageLoaded, setImageLoaded] = useState(false);
 
   const themeProps = {
     black: '#030303',
     grey: '#717171',
     white: '#FFFFFF',
-    Montserrat: '\'Montserrat\', sans-serif',
-    Roboto: '\'Roboto Condensed\', sans-serif'
-  }
+    Montserrat: "'Montserrat', sans-serif",
+    Roboto: "'Roboto Condensed', sans-serif",
+  };
 
   return (
     <Provider store={store}>
@@ -30,7 +29,7 @@ function App() {
             <Header isLoaded={imageLoaded} />
           </nav>
           <Switch>
-            <Route path="/">
+            <Route path='/'>
               <section>
                 <Welcome setLoaded={setImageLoaded} />
               </section>

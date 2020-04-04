@@ -14,21 +14,27 @@ const Welcome = ({ setLoaded, setWelcomeRef }) => {
   });
 
   return (
-    <WelcomeSection ref={welcomeRef} >
-      <StyledBackgroundImage src={Logo} alt="Site Background" onLoad={e => {
-        setLoaded(true);
-        e.target.parentElement.classList.add('active');
-      }} />
-        <div className="welcome__title">
-          <h1>
-            Snoh co.
-          </h1>
-          <p style={{textAlign: 'center'}}>
-            <UnderlinedSpan>Web is our space!</UnderlinedSpan>
-          </p>
-        </div>
+    <WelcomeSection ref={welcomeRef}>
+      <StyledBackgroundImage
+        src={Logo}
+        alt='Site Background'
+        onLoad={e => {
+          setLoaded(true);
+          e.target.parentElement.classList.add('active');
+        }}
+      />
+      <div className='welcome__title'>
+        <h1>Snoh co.</h1>
+        <p style={{ textAlign: 'center' }}>
+          <UnderlinedSpan>Web is our space!</UnderlinedSpan>
+        </p>
+      </div>
       <SeeMoreWrapper>
-        <SeeMoreButton onClick={_ => window.scrollTo({behavior: 'smooth', top: window.innerHeight})}>
+        <SeeMoreButton
+          onClick={_ =>
+            window.scrollTo({ behavior: 'smooth', top: window.innerHeight })
+          }
+        >
           <span>See more..</span>
         </SeeMoreButton>
       </SeeMoreWrapper>
@@ -36,11 +42,7 @@ const Welcome = ({ setLoaded, setWelcomeRef }) => {
   );
 };
 
-export default connect(
-  null,
-  { setWelcomeRef }
-)(Welcome);
-
+export default connect(null, { setWelcomeRef })(Welcome);
 
 const WelcomeSection = styled.div`
   width: 100%;
@@ -80,7 +82,7 @@ const WelcomeSection = styled.div`
     transform: translateY(20px);
     opacity: 0;
 
-    transition: all .5s cubic-bezier(0.4, 0, 1, 1) 1.2s;
+    transition: all 0.5s cubic-bezier(0.4, 0, 1, 1) 1.2s;
   }
 
   &.active {
@@ -91,7 +93,6 @@ const WelcomeSection = styled.div`
       transform: translateY(0);
       opacity: 1;
     }
-
   }
 `;
 
@@ -111,7 +112,6 @@ const StyledBackgroundImage = styled.img`
   @media (max-width: 1200px) {
     object-position: 100% 50%;
   }
-
 `;
 
 const SeeMoreWrapper = styled.div`
@@ -125,7 +125,7 @@ const SeeMoreButton = styled.button`
   font-family: ${props => props.theme.Roboto};
   font-weight: 300;
 
-  padding: .2rem 2rem;
+  padding: 0.2rem 2rem;
 
   font-size: 18px;
   line-height: 24px;
@@ -157,7 +157,7 @@ const SeeMoreButton = styled.button`
     transform: rotate(-45deg) translate(10px, -10px);
     transform-origin: 50% 50%;
 
-    transition: transform .4s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: transform 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
   }
 
   &::after {
@@ -174,7 +174,7 @@ const SeeMoreButton = styled.button`
     background-color: ${props => props.theme.white};
 
     transform: translateY(-105%);
-    transition: transform .4s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: transform 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
   }
 
   &:hover {
