@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { getRefs } from '../redux/actions';
 
 const Header = ({ isLoaded, sections }) => {
-  const { welcome, about, projects } = sections;
+  const { welcome, about, projects, contact } = sections;
   const logo = 'Snoh Co.';
 
   return (
@@ -58,11 +58,21 @@ const Header = ({ isLoaded, sections }) => {
             <span>Projects</span>
           </StyledButton>
         </li>
-        {/* <li>
-          <StyledButton>
+        <li>
+          <StyledButton
+            onClick={
+              projects
+                ? _ =>
+                    contact.current.scrollIntoView({
+                      block: 'start',
+                      behavior: 'smooth',
+                    })
+                : null
+            }
+          >
             <span>Contact</span>
           </StyledButton>
-        </li> */}
+        </li>
       </StyledList>
     </StyledHeader>
   );
