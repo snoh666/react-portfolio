@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { setProjectsRef } from '../redux/actions';
 
 import styled from 'styled-components';
+import StyledContainer from './styled/StyledContainer';
 import SectionTitle from './styled/SectionTitle';
 import UnderlinedSpan from './styled/UnderlinedSpan';
 
@@ -17,7 +18,7 @@ function Projects({ setProjectsRef }) {
   });
 
   return (
-    <div ref={projectsRef}>
+    <StyledContainer ref={projectsRef}>
       <SectionTitle>
         <span>Projects</span>
       </SectionTitle>
@@ -159,14 +160,14 @@ function Projects({ setProjectsRef }) {
           </p>
         </ProjectContainer>
       </ProjectsWrapper>
-    </div>
+    </StyledContainer>
   );
 }
 
 export default connect(null, { setProjectsRef })(Projects);
 
 const ProjectsWrapper = styled.div`
-  max-width: 1080px;
+  width: 100%;
   margin: 40px auto;
   padding: 0 30px;
 
