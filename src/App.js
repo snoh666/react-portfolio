@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import Welcome from './components/Welcome';
 import About from './components/About';
 import Projects from './components/Projects';
+import Contact from './components/Contact';
 import { ThemeProvider } from 'styled-components';
 
 function App() {
@@ -38,6 +39,9 @@ function App() {
               </section>
               <section>
                 <Projects />
+              </section>
+              <section>
+                <Contact />
               </section>
             </Route>
           </Switch>
