@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const UnderlinedSpan = styled.span`
   position: relative;
-  color: ${props => props.theme.grey};
+  color: ${props => props.theme.blue};
   padding-bottom: 2.5px;
 
   &::after {
@@ -16,7 +16,7 @@ const UnderlinedSpan = styled.span`
     left: 50%;
     transform: translateX(-50%);
 
-    background: ${props => props.theme.grey};
+    background: ${props => props.theme.blue};
   }
 `;
 

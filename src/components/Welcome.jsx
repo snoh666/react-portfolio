@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
 
-import Logo from './images/logo.png';
+import Logo from './images/encleadus-bg.jpg';
 import UnderlinedSpan from './styled/UnderlinedSpan';
 import { connect } from 'react-redux';
 import { setWelcomeRef } from '../redux/actions';
@@ -99,18 +99,18 @@ const WelcomeSection = styled.div`
 const StyledBackgroundImage = styled.img`
   position: absolute;
 
-  top: 0;
+  top: 50px;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: calc(100% - 3rem - 50px);
 
   object-fit: contain;
-  object-position: center;
+  object-position: 60% center;
 
   z-index: -1;
 
   @media (max-width: 1200px) {
-    object-position: 100% 50%;
+    object-position: right center;
   }
 `;
 

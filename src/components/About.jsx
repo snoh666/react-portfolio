@@ -42,6 +42,6 @@ const AboutDescription = styled.div`
     line-height: 1.25em;
     letter-spacing: 2px;
     font-weight: 400;
-    color: ${props => props.theme.grey};
+    color: ${props => props.theme.blue};
   }
 `;

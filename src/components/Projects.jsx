@@ -187,7 +187,7 @@ const ProjectContainer = styled.div`
   }
 
   p {
-    color: ${props => props.theme.grey};
+    color: ${props => props.theme.blue};
     letter-spacing: 1.5px;
     line-height: 1.25em;
   }
@@ -217,7 +217,7 @@ const ProjectLinks = styled.div`
 
     &:hover {
       svg path {
-        fill: ${props => props.theme.grey};
+        fill: ${props => props.theme.blue};
       }
     }
   }
