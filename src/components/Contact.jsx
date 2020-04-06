@@ -28,7 +28,7 @@ const Contact = ({ setContactRef }) => {
           <br />
           Talk about a project or need evaluate one?
           <br />
-          I'm open to new ideas so feel free to mail me!
+          I'm open to new ideas so feel free to contact me or check out my work!
         </p>
         <SocialsIcons>
           <li>
