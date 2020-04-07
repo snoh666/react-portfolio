@@ -15,11 +15,11 @@ function App() {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   const themeProps = {
-    black: '#030303',
+    black: '#000000',
     blue: '#a6ccd4',
     white: '#FFFFFF',
     Montserrat: "'Montserrat', sans-serif",
-    Roboto: "'Roboto Condensed', sans-serif",
+    Roboto: "'Roboto Condesnsed', sans-serif",
   };
 
   return (
