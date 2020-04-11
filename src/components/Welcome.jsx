@@ -83,6 +83,7 @@ const WelcomeSection = styled.div`
     opacity: 0;
 
     transition: all 0.5s cubic-bezier(0.4, 0, 1, 1) 1.2s;
+    mix-blend-mode: difference;
   }
 
   &.active {
