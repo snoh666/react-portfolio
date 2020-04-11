@@ -131,4 +131,8 @@ const StyledList = styled.ul`
   @media (max-width: 1200px) {
     max-width: 100%;
   }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
