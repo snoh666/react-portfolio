@@ -127,4 +127,8 @@ const StyledList = styled.ul`
   li {
     margin: 0 15px;
   }
+
+  @media (max-width: 1200px) {
+    max-width: 100%;
+  }
 `;
