@@ -11,6 +11,10 @@ const StyledContainer = styled.div`
   flex-flow: column nowrap;
   align-content: center;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    padding: 0 15px;
+  }
 `;
 
 export default StyledContainer;

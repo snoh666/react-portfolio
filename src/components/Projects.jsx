@@ -175,6 +175,10 @@ const ProjectsWrapper = styled.div`
   flex-flow: row wrap;
   align-items: flex-start;
   justify-content: space-around;
+
+  @media (max-width: 768px) {
+    padding: 0 15px;
+  }
 `;
 
 const ProjectContainer = styled.div`
