@@ -190,6 +190,10 @@ const ProjectContainer = styled.div`
     flex: 1 1 320px;
   }
 
+  @media (max-width: 768px) {
+    padding: 7.5px;
+  }
+
   p {
     color: ${props => props.theme.blue};
     letter-spacing: 1.5px;
