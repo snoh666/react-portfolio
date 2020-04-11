@@ -125,6 +125,7 @@ const SeeMoreWrapper = styled.div`
 const SeeMoreButton = styled.button`
   font-family: ${props => props.theme.Roboto};
   font-weight: 300;
+  min-width: 200px;
 
   padding: 0.2rem 2rem;
 
