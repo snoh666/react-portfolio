@@ -26,7 +26,7 @@ const Welcome = ({ setLoaded, setWelcomeRef }) => {
       <div className='welcome__title'>
         <h1>Snoh co.</h1>
         <p style={{ textAlign: 'center' }}>
-          <UnderlinedSpan>Web is our space!</UnderlinedSpan>
+          <UnderlinedSpan>Web is my space!</UnderlinedSpan>
         </p>
       </div>
       <SeeMoreWrapper>
