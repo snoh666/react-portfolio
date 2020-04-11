@@ -46,6 +46,8 @@ export default connect(null, { setWelcomeRef })(Welcome);
 
 const WelcomeSection = styled.div`
   width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
   height: 100vh;
   padding: 50px 0 0 5%;
 
