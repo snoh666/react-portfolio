@@ -15,6 +15,10 @@ const StyledContainer = styled.div`
   @media (max-width: 768px) {
     padding: 0 15px;
   }
+
+  @media (max-width: 460px) {
+    min-height: 400px;
+  }
 `;
 
 export default StyledContainer;
