@@ -111,7 +111,7 @@ const StyledHeader = styled.header`
 `;
 
 const StyledLogo = styled.div`
-  width: 20%;
+  min-width: 20%;
   max-width: 50%;
 `;
 
