@@ -36,6 +36,7 @@ const Contact = ({ setContactRef }) => {
               href='https://github.com/snoh666'
               target='_blank'
               rel='noopener noreferrer'
+              aria-label='githubaccount'
             >
               <GithubIcon />
             </a>
@@ -45,6 +46,7 @@ const Contact = ({ setContactRef }) => {
               href='mailto:snochopl@gmail.com'
               target='_blank'
               rel='noopener noreferrer'
+              aria-label='mailtome'
             >
               <MailIcon />
             </a>
@@ -54,6 +56,7 @@ const Contact = ({ setContactRef }) => {
               href='https://www.linkedin.com/in/mikołaj-snochowski-a15109183'
               target='_blank'
               rel='noopener noreferrer'
+              aria-label='linkedinprofile'
             >
               <LinkedInIcon />
             </a>
