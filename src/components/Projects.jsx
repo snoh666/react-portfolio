@@ -34,6 +34,7 @@ function Projects({ setProjectsRef }) {
                 href='http://marekbelka.com/'
                 target='_blank'
                 rel='noopener noreferrer'
+                aria-label='checkproject'
               >
                 <DesktopIcon />
               </a>
@@ -56,6 +57,7 @@ function Projects({ setProjectsRef }) {
                 href='https://generatorpomyslow.pl/'
                 target='_blank'
                 rel='noopener noreferrer'
+                aria-label='checkproject'
               >
                 <DesktopIcon />
               </a>
@@ -78,6 +80,7 @@ function Projects({ setProjectsRef }) {
                 href='https://www.magazynbieganie.pl/'
                 target='_blank'
                 rel='noopener noreferrer'
+                aria-label='checkproject'
               >
                 <DesktopIcon />
               </a>
@@ -98,6 +101,7 @@ function Projects({ setProjectsRef }) {
                 href='https://github.com/snoh666/anon-ask-react'
                 target='_blank'
                 rel='noopener noreferrer'
+                aria-label='seecode'
               >
                 <GithubIcon />
               </a>
@@ -119,6 +123,7 @@ function Projects({ setProjectsRef }) {
                 href='https://github.com/snoh666/sleep-cycle-calculator'
                 target='_blank'
                 rel='noopener noreferrer'
+                aria-label='seecode'
               >
                 <GithubIcon />
               </a>
@@ -140,6 +145,7 @@ function Projects({ setProjectsRef }) {
                 href='https://www.youtube.com/watch?v=eBx8c8nkWWo'
                 target='_blank'
                 rel='noopener noreferrer'
+                aria-label='checkproject'
               >
                 <DesktopIcon />
               </a>
@@ -147,6 +153,7 @@ function Projects({ setProjectsRef }) {
                 href='https://github.com/snoh666/sleep-cycle-calculator'
                 target='_blank'
                 rel='noopener noreferrer'
+                aria-label='seecode'
               >
                 <GithubIcon />
               </a>
