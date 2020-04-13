@@ -3,10 +3,11 @@ import styled from 'styled-components';
 
 import Logo from './images/encleadus-bg.jpg';
 import UnderlinedSpan from './styled/UnderlinedSpan';
+import StyledButton from './styled/StyledButton';
 import { connect } from 'react-redux';
-import { setWelcomeRef } from '../redux/actions';
+import { setWelcomeRef, getContactRef } from '../redux/actions';
 
-const Welcome = ({ setLoaded, setWelcomeRef }) => {
+const Welcome = ({ setLoaded, setWelcomeRef, contactRef }) => {
   const welcomeRef = useRef();
 
   useEffect(() => {
@@ -24,9 +25,24 @@ const Welcome = ({ setLoaded, setWelcomeRef }) => {
         }}
       />
       <div className='welcome__title'>
-        <h1>Snoh co.</h1>
-        <p style={{ textAlign: 'center' }}>
-          <UnderlinedSpan>Web is my space!</UnderlinedSpan>
+        <p style={{ textAlign: 'center', marginBottom: 10 }}>
+          <UnderlinedSpan>In need of</UnderlinedSpan>
+        </p>
+        <h2 style={{ marginBottom: 10 }}>Front-end developer?</h2>
+        <p style={{ textAlign: 'center', marginBottom: 10 }}>
+          <StyledButton
+            onClick={
+              contactRef
+                ? _ =>
+                    contactRef.current.scrollIntoView({
+                      block: 'start',
+                      behavior: 'smooth',
+                    })
+                : null
+            }
+          >
+            <span>Contact me!</span>
+          </StyledButton>
         </p>
       </div>
       <SeeMoreWrapper>
@@ -42,7 +58,7 @@ const Welcome = ({ setLoaded, setWelcomeRef }) => {
   );
 };
 
-export default connect(null, { setWelcomeRef })(Welcome);
+export default connect(getContactRef, { setWelcomeRef })(Welcome);
 
 const WelcomeSection = styled.div`
   width: 100%;
@@ -57,8 +73,8 @@ const WelcomeSection = styled.div`
   align-items: flex-start;
   justify-content: center;
 
-  h1 {
-    font-size: 5.25rem;
+  h2 {
+    font-size: 3rem;
     font-weight: 200;
   }
 
