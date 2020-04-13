@@ -5,7 +5,7 @@ const projects = [
       site: 'http://marekbelka.com/',
       code: false,
     },
-    descrption: `One of first commercial projects i've made. It was possible cause of contacts gained throught friends and etc. Maybe desing and etc arent that much great but I'm really proud of this site by being my first commercial project.`,
+    description: `One of first commercial projects i've made. It was possible cause of contacts gained throught friends and etc. Maybe desing and etc arent that much great but I'm really proud of this site by being my first commercial project.`,
   },
   {
     title: 'Generator Pomysłów',
@@ -21,7 +21,7 @@ const projects = [
       site: 'https://www.magazynbieganie.pl/',
       code: false,
     },
-    descirption: `Created whole layout from scratch with psd file. Site was preapred for a lot of user per month`,
+    description: `Created whole layout from scratch with psd file. Site was preapred for a lot of user per month`,
   },
   {
     title: 'Tellonym with React',
@@ -29,7 +29,7 @@ const projects = [
       site: false,
       code: 'https://github.com/snoh666/anon-ask-react',
     },
-    descirption: `Clone of tellonym created with React and headless firebase database storage. Planned to use as replacement for tellonym with spotted fan page.`,
+    description: `Clone of tellonym created with React and headless firebase database storage. Planned to use as replacement for tellonym with spotted fan page.`,
   },
   {
     title: 'Sleep cycle calculator',
@@ -37,7 +37,7 @@ const projects = [
       site: 'https://snoh666.github.io/sleep-cycle-calculator/',
       code: 'https://github.com/snoh666/sleep-cycle-calculator',
     },
-    descirption: `Faster and rebuilded in react version of original site. I was using it and had some things i would done in other way so there it is. In my opinion faster and easier in use.`,
+    description: `Faster and rebuilded in react version of original site. I was using it and had some things i would done in other way so there it is. In my opinion faster and easier in use.`,
   },
   {
     title: 'E Diary - School',
@@ -45,7 +45,7 @@ const projects = [
       site: false,
       code: 'https://github.com/snoh666/sleep-cycle-calculator',
     },
-    descirption: `Created as class project in my school, created over skills and level required in class. REST API written with php. Of course there are some mistakes, that i would change but with lack of time i cant for now.`,
+    description: `Created as class project in my school, created over skills and level required in class. REST API written with php. Of course there are some mistakes, that i would change but with lack of time i cant for now.`,
   },
 ];
 
