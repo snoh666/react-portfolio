@@ -1,4 +1,5 @@
 const getRefs = state => ({ sections: state.sections });
+const getContactRef = state => ({ sections: state.sections.contact });
 
 const setWelcomeRef = state => ({
   type: 'SET_WELCOME_REF',
@@ -20,4 +21,11 @@ const setContactRef = state => ({
   ref: state,
 });
 
-export { getRefs, setWelcomeRef, setAboutRef, setProjectsRef, setContactRef };
+export {
+  getRefs,
+  getContactRef,
+  setWelcomeRef,
+  setAboutRef,
+  setProjectsRef,
+  setContactRef,
+};
