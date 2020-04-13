@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 import store from './redux';
 import { Provider } from 'react-redux';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Welcome from './components/Welcome';
@@ -25,30 +24,24 @@ function App() {
   return (
     <Provider store={store}>
       <ThemeProvider theme={themeProps}>
-        <Router>
-          <nav>
-            <Header isLoaded={imageLoaded} />
-          </nav>
-          <Switch>
-            <Route path='/'>
-              <section>
-                <Welcome setLoaded={setImageLoaded} />
-              </section>
-              <section>
-                <About />
-              </section>
-              <section>
-                <Projects />
-              </section>
-              <section>
-                <Contact />
-              </section>
-            </Route>
-          </Switch>
-          <footer>
-            <Footer />
-          </footer>
-        </Router>
+        <nav>
+          <Header isLoaded={imageLoaded} />
+        </nav>
+        <section>
+          <Welcome setLoaded={setImageLoaded} />
+        </section>
+        <section>
+          <About />
+        </section>
+        <section>
+          <Projects />
+        </section>
+        <section>
+          <Contact />
+        </section>
+        <footer>
+          <Footer />
+        </footer>
       </ThemeProvider>
     </Provider>
   );
