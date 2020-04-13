@@ -1,5 +1,5 @@
 const getRefs = state => ({ sections: state.sections });
-const getContactRef = state => ({ sections: state.sections.contact });
+const getContactRef = state => ({ contactRef: state.sections.contact });
 
 const setWelcomeRef = state => ({
   type: 'SET_WELCOME_REF',
