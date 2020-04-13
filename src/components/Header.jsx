@@ -61,7 +61,7 @@ const Header = ({ isLoaded, sections }) => {
         <li>
           <StyledButton
             onClick={
-              projects
+              contact
                 ? _ =>
                     contact.current.scrollIntoView({
                       block: 'start',
