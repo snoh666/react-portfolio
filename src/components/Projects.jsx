@@ -23,8 +23,9 @@ function Projects({ setProjectsRef }) {
       </SectionTitle>
 
       <ProjectsWrapper>
-        {projects.map(project => (
+        {projects.map((project, index) => (
           <ProjectItem
+            key={index}
             title={project.title}
             description={project.description}
             links={project.links}
