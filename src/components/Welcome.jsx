@@ -25,11 +25,11 @@ const Welcome = ({ setLoaded, setWelcomeRef, contactRef }) => {
         }}
       />
       <div className='welcome__title'>
-        <p style={{ textAlign: 'center', marginBottom: 10 }}>
+        <WelcomeParagraph>
           <UnderlinedSpan>In need of</UnderlinedSpan>
-        </p>
+        </WelcomeParagraph>
         <h2>Front-end developer?</h2>
-        <p style={{ textAlign: 'center', marginBottom: 10 }}>
+        <WelcomeParagraph>
           <StyledButton
             onClick={
               contactRef
@@ -43,7 +43,7 @@ const Welcome = ({ setLoaded, setWelcomeRef, contactRef }) => {
           >
             <span>Contact me!</span>
           </StyledButton>
-        </p>
+        </WelcomeParagraph>
       </div>
       <SeeMoreWrapper>
         <SeeMoreButton
@@ -118,6 +118,11 @@ const WelcomeSection = styled.div`
       opacity: 1;
     }
   }
+`;
+
+const WelcomeParagraph = styled.p`
+  margin-bottom: 10px;
+  text-align: center;
 `;
 
 const StyledBackgroundImage = styled.img`
