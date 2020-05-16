@@ -25,7 +25,7 @@ const Welcome = ({ setLoaded, setWelcomeRef, contactRef }) => {
         }}
       />
       <div className='welcome__title'>
-        <WelcomeParagraph>
+        <WelcomeParagraph isSubDesc={true}>
           <UnderlinedSpan>In need of</UnderlinedSpan>
         </WelcomeParagraph>
         <h2>Front-end developer?</h2>
@@ -123,6 +123,22 @@ const WelcomeSection = styled.div`
 const WelcomeParagraph = styled.p`
   margin-bottom: 10px;
   text-align: center;
+
+  ${props => {
+    if (props.isSubDesc) {
+      return `
+        @media (max-width: 768px) {
+          span {
+            color: ${props.theme.white};
+            &::after {
+              background: ${props.theme.white};
+            }
+          }
+        }
+      `;
+    }
+    return null;
+  }}
 `;
 
 const StyledBackgroundImage = styled.img`
