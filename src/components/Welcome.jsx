@@ -28,7 +28,7 @@ const Welcome = ({ setLoaded, setWelcomeRef, contactRef }) => {
         <p style={{ textAlign: 'center', marginBottom: 10 }}>
           <UnderlinedSpan>In need of</UnderlinedSpan>
         </p>
-        <h2 style={{ marginBottom: 10 }}>Front-end developer?</h2>
+        <h2>Front-end developer?</h2>
         <p style={{ textAlign: 'center', marginBottom: 10 }}>
           <StyledButton
             onClick={
@@ -76,11 +76,17 @@ const WelcomeSection = styled.div`
   h2 {
     font-size: 3rem;
     font-weight: 200;
+
+    margin-bottom: 10px;
+
+    @media (max-width: 540px) {
+      text-align: center;
+    }
   }
 
   &::before {
     content: '';
-    position: absolute;
+    position: fixed;
     display: block;
 
     top: 0;
@@ -101,7 +107,6 @@ const WelcomeSection = styled.div`
     opacity: 0;
 
     transition: all 0.5s cubic-bezier(0.4, 0, 1, 1) 1.2s;
-    mix-blend-mode: difference;
   }
 
   &.active {
