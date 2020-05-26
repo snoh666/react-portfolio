@@ -1,18 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
+import UnderlinedSpan from './styled/UnderlinedSpan';
 
 function Footer() {
   return (
     <StyledFooter>
       <FooterItem>
-        <p>This web app is progressive!</p>
+        <StyledParagraph>
+          <UnderlinedSpan>This web app is progressive!</UnderlinedSpan>
+        </StyledParagraph>
         <p>
-          So you can install it as standalone application to view offline on
-          mobile and desktop devices!
+          It means that you can install it as standalone application to view
+          offline on mobile and desktop devices!
         </p>
       </FooterItem>
       <FooterItem textAlign='end'>
-        <p>Created by snoh</p>
+        <p>
+          Created by <UnderlinedSpan>me</UnderlinedSpan>!
+        </p>
       </FooterItem>
     </StyledFooter>
   );
@@ -32,7 +37,7 @@ const StyledFooter = styled.div`
   justify-content: space-between;
 
   @media (max-width: 768px) {
-    padding: 0 15px;
+    padding: 30px 15px;
   }
 
   @media (max-width: 560px) {
@@ -44,8 +49,6 @@ const StyledFooter = styled.div`
 const FooterItem = styled.div`
   max-width: 50%;
   p {
-    margin: 15px 0;
-    height: auto;
     text-align: ${props => (props.textAlign === 'end' ? 'end' : 'inherit')};
   }
 
@@ -53,4 +56,8 @@ const FooterItem = styled.div`
     max-width: 100%;
     margin: 30px 0 0;
   }
+`;
+
+const StyledParagraph = styled.p`
+  margin-bottom: 15px;
 `;
