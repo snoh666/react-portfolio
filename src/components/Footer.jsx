@@ -11,7 +11,13 @@ function Footer() {
         </StyledParagraph>
         <p>
           It means that you can install it as standalone application to view
-          offline on mobile and desktop devices!
+          offline on mobile and desktop devices!{' '}
+          <a
+            href='https://medium.com/progressivewebapps/how-to-install-a-pwa-to-your-device-68a8d37fadc1'
+            rel='noreferrer noopener'
+          >
+            <UnderlinedSpan>How to install pwa?</UnderlinedSpan>
+          </a>
         </p>
       </FooterItem>
       <FooterItem textAlign='end'>
@@ -44,6 +50,10 @@ const StyledFooter = styled.div`
     flex-flow: column nowrap;
     justify-content: center;
   }
+
+  a {
+    text-decoration: none;
+  }
 `;
 
 const FooterItem = styled.div`
@@ -60,4 +70,8 @@ const FooterItem = styled.div`
 
 const StyledParagraph = styled.p`
   margin-bottom: 15px;
+
+  span {
+    color: ${props => props.theme.white};
+  }
 `;
