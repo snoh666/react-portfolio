@@ -13,6 +13,7 @@ function Footer() {
           It means that you can install it as standalone application to view
           offline on mobile and desktop devices!{' '}
           <a
+            class='a--inline-block'
             href='https://medium.com/progressivewebapps/how-to-install-a-pwa-to-your-device-68a8d37fadc1'
             rel='noreferrer noopener'
           >
@@ -53,6 +54,9 @@ const StyledFooter = styled.div`
 
   a {
     text-decoration: none;
+    &.a--inline-block {
+      display: inline-block;
+    }
   }
 `;
 
