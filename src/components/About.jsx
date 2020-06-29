@@ -19,11 +19,11 @@ function About({ setAboutRef }) {
       </SectionTitle>
       <AboutDescription>
         <p>
-          I'm a 19 years old front-end developer with big ambitions. Half a year
-          ago I started freelancing with development of responsive Wordpress
-          themes. Between projects I focus on polishing my skills and developing
-          new ones with React and Vue. In the near future I’m planning to get a
-          full time job as I’m ending my school in May.
+          I'm a 19 years old front-end developer with big ambitions. more than a
+          half year ago I've started freelancing with development of responsive
+          Wordpress themes. Between projects I focus on polishing my skills and
+          developing new ones with React. Currenlty I'm also looking for a job
+          located in Wrocław, Poland.
         </p>
       </AboutDescription>
     </StyledContainer>
