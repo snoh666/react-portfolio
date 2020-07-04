@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import StyledButton from './styled/StyledButton';
+import ThemeButton from './parts/ThemeButton';
 import { connect } from 'react-redux';
 import { getRefs } from '../redux/actions';
 
@@ -12,7 +12,8 @@ const Header = ({ isLoaded, sections }) => {
     <StyledHeader className={isLoaded ? 'active' : null}>
       <StyledLogo>
         <h2>
-          <StyledButton
+          <ThemeButton
+            text={logo}
             onClick={
               welcome
                 ? _ =>
@@ -22,14 +23,13 @@ const Header = ({ isLoaded, sections }) => {
                     })
                 : null
             }
-          >
-            <span>{logo}</span>
-          </StyledButton>
+          />
         </h2>
       </StyledLogo>
       <StyledList>
         <li>
-          <StyledButton
+          <ThemeButton
+            text='About'
             onClick={
               about
                 ? _ =>
@@ -39,12 +39,11 @@ const Header = ({ isLoaded, sections }) => {
                     })
                 : null
             }
-          >
-            <span>About</span>
-          </StyledButton>
+          />
         </li>
         <li>
-          <StyledButton
+          <ThemeButton
+            text={'Projects'}
             onClick={
               projects
                 ? _ =>
@@ -54,12 +53,11 @@ const Header = ({ isLoaded, sections }) => {
                     })
                 : null
             }
-          >
-            <span>Projects</span>
-          </StyledButton>
+          />
         </li>
         <li>
-          <StyledButton
+          <ThemeButton
+            text='Contact'
             onClick={
               contact
                 ? _ =>
@@ -69,9 +67,7 @@ const Header = ({ isLoaded, sections }) => {
                     })
                 : null
             }
-          >
-            <span>Contact</span>
-          </StyledButton>
+          />
         </li>
       </StyledList>
     </StyledHeader>

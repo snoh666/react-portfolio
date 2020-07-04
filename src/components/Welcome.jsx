@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import Logo from './images/encleadus-bg.jpg';
 import UnderlinedSpan from './styled/UnderlinedSpan';
-import StyledButton from './styled/StyledButton';
+import ThemeButton from './parts/ThemeButton';
 import { connect } from 'react-redux';
 import { setWelcomeRef, getContactRef } from '../redux/actions';
 
@@ -30,7 +30,8 @@ const Welcome = ({ setLoaded, setWelcomeRef, contactRef }) => {
         </WelcomeParagraph>
         <h2>Front-end developer?</h2>
         <WelcomeParagraph>
-          <StyledButton
+          <ThemeButton
+            text='Contact me!'
             onClick={
               contactRef
                 ? _ =>
@@ -40,9 +41,7 @@ const Welcome = ({ setLoaded, setWelcomeRef, contactRef }) => {
                     })
                 : null
             }
-          >
-            <span>Contact me!</span>
-          </StyledButton>
+          />
         </WelcomeParagraph>
       </div>
       <SeeMoreWrapper>
