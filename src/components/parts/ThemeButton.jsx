@@ -1,4 +1,13 @@
+import React from 'react';
 import styled from 'styled-components';
+
+const ThemeButton = ({ text, ...rest }) => {
+  return (
+    <StyledButton {...rest}>
+      <span>{text}</span>
+    </StyledButton>
+  );
+};
 
 const StyledButton = styled.button`
   font-family: ${props => props.theme.Roboto};
@@ -89,4 +98,4 @@ const StyledButton = styled.button`
   }
 `;
 
-export default StyledButton;
+export default ThemeButton;
