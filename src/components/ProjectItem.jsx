@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import UnderlinedSpan from './styled/UnderlinedSpan';
 
-import { ReactComponent as DesktopIcon } from './svg/desktop.svg';
+import { ReactComponent as OpenInBrowser } from './svg/openInBrowser.svg';
 import { ReactComponent as GithubIcon } from './svg/github.svg';
 
 const ProjectItem = ({ title, description, links: { site, code } }) => {
@@ -21,7 +21,7 @@ const ProjectItem = ({ title, description, links: { site, code } }) => {
               rel='noopener noreferrer'
               aria-label='checkproject'
             >
-              <DesktopIcon />
+              <OpenInBrowser />
             </a>
           ) : null}
           {code ? (
@@ -86,7 +86,7 @@ const ProjectLinks = styled.div`
     padding: 2.5px;
 
     &:hover {
-      svg path {
+      svg {
         fill: ${props => props.theme.blue};
       }
     }
@@ -96,8 +96,8 @@ const ProjectLinks = styled.div`
     width: 30px;
     height: 30px;
     margin: 0 5px;
+    fill: ${props => props.theme.white};
     path {
-      fill: ${props => props.theme.white};
       transition: fill 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
     }
   }
